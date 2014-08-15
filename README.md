@@ -1,6 +1,6 @@
 #Getting and Cleaning Data Coursera Course Project
 
-Run the *run_analysis.R* script included in the root of this project with the UCI HAR Dataset, also included in a directory called UCI HAR Dataset to recreate all steps used to create the two tidy data sets created for thus course project.  The run_analysis script is pretty well commented, but I'll recap here:
+Run the *run_analysis.R* script included in the root of this project.  If the dataset is not already extracted into a directory called UCI HAR Dataset, the script downloads and extracts the data.  It then recreates all steps used to create the two tidy data sets for ths course project.  The run_analysis script is pretty well commented, but I'll recap here:
 
 1 I start by setting variables to represent the path to the test and train data sets, and the filenames for the files containing the necessary data
 2 Those data sets are then read into R and combined into one larger dataset

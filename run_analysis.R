@@ -1,3 +1,13 @@
+#Grab the data if it doesn't exist
+if(!file.exists("UCI HAR Dataset")) {
+    td = tempdir()
+    tf = tempfile(tmpdir=td, fileext=".zip")
+    fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+    download.file(fileURL, tf, method="curl")
+    unzip(tf, files=unzip(tf, list=TRUE)$Name, exdir=".", overwrite=TRUE)
+    unlink(tf)
+}
+
 #Set paths and file names for datasets
 testPath <- "UCI HAR Dataset/test/"
 trainPath <- "UCI HAR Dataset/train/"
